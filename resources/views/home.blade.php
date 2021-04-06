@@ -14,7 +14,7 @@
             body {
                 font-family: 'Nunito', sans-serif;
                 --bg-opacity:1;
-                background-color:#1a202c
+                background-color:#334255
             }
 
             h1 {
@@ -62,13 +62,19 @@
                 padding-left: 5px
             }
 
-            .home-button-text {
-                padding: 5px;
-                display:inline-block
+            .home-button:hover {
+                background-color:#D53320
             }
 
-            .home-button-text:hover {
-                background-color:#D53320
+            .home-button {
+                background-color:#F05340;
+                color:#FFFFFF;
+                font-family: 'Nunito', sans-serif;
+                font-size: 20px;
+                font-weight: bold;
+                padding-left: 5px;
+                outline:white solid 0px;
+                border: white solid 0px;
             }
 
         </style>
@@ -83,8 +89,8 @@
             <div class="home-button-div">
                 <ul id="horizontal">
 
-                    <li class="home-button-text">
-                        Home
+                    <li> 
+                       <button class="home-button" onclick="window.location='{{ url("home") }}'">Home</button>
                     </li>
 
                     <li style="padding-left:40px">
@@ -98,6 +104,7 @@
         <!-- Introduction -->
         <div class="text">
             <h1>
+                <img src="img/logo.jpg" alt="Logo">
                 GYIK - Laravel
             </h1>
 
