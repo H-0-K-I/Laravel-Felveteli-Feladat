@@ -1,7 +1,7 @@
 @extends('layout.layout')
 
 @section('content')
-        <!-- List of answers to a specific question -->
+        <!-- List of all questions -->
         <div>
             
         </div>

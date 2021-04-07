@@ -21,4 +21,6 @@ Route::get('/home', function () {
     return redirect('/');
 });
 
-Route::get('/questions/{id}', 'QuestionController@show');
+Route::get('/questions', 'App\Http\Controllers\QuestionController@index');
+
+Route::get('/questions/{id}', 'App\Http\Controllers\QuestionController@show');

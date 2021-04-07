@@ -27,6 +27,11 @@
                 font-size: 35px
             }
 
+            .center {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
             .antialiased {
                 -webkit-font-smoothing:antialiased;
                 -moz-osx-font-smoothing:grayscale
@@ -75,6 +80,15 @@
                 padding-left: 5px;
                 outline:white solid 0px;
                 border: white solid 0px;
+            }
+
+            .navigation-button {
+                background-color:#FFFFFF;
+                border: 6px solid #334255
+            }
+
+            .navigation-button:hover {
+                border: 6px solid #888888;
             }
 
         </style>

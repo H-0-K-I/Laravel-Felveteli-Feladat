@@ -13,9 +13,29 @@
         </h2>
     </div>
 
-    <!-- Questions list -->
-    <div>
-        
+    <!-- Navigation options -->
+    <div class="text" style="padding-top:100px;">
+        <table class="center">
+            <tr>
+                <td style="width:400px;">
+                    <button class="navigation-button" onclick="window.location='{{ url("questions") }}'" style="width:300px;">
+                        <h3>
+                            Beküldött kérdések megtekintése
+                            <img src="img/arrow_right.png" alt="Arrow right" style="width:20px;height:20px;">    
+                        </h3>
+                    </button>
+                </td>
+
+                <td style="width:400px;">
+                    <button class="navigation-button" onclick="window.location='{{ url("questions/add") }}'" style="width:300px;">
+                        <h3>
+                            Új kérdés feltöltése
+                            <img src="img/arrow_up.png" alt="Arrow up" style="width:20px;height:20px;">    
+                        </h3>
+                    </button>
+                </td>
+            </tr>
+        </table>
     </div>
 </body>
 @endsection
