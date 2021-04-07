@@ -16,7 +16,7 @@
         <!-- List of all questions -->
         @foreach($questions as $question)
                 <div>
-                        {{ $question->id }} - {{ $question->question }}
+                        {{ $question->question }} - answers: {{ $question->no_of_answers }}
                 </div>
         @endforeach
 @endsection
