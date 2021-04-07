@@ -20,3 +20,10 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return redirect('/');
 });
+
+Route::get('/questions/{id}', function ($id) {
+
+    // DB query here
+
+    return view('question', ['id' => $id]);
+});
