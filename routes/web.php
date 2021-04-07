@@ -21,9 +21,4 @@ Route::get('/home', function () {
     return redirect('/');
 });
 
-Route::get('/questions/{id}', function ($id) {
-
-    // DB query here
-
-    return view('question', ['id' => $id]);
-});
+Route::get('/questions/{id}', 'QuestionController@show');
