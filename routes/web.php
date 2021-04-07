@@ -13,14 +13,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// root
 Route::get('/', function () {
     return view('home');
 });
 
+// redirect to home (root)
 Route::get('/home', function () {
     return redirect('/');
 });
 
-Route::get('/questions', 'App\Http\Controllers\QuestionController@index');
 
-Route::get('/questions/{id}', 'App\Http\Controllers\QuestionController@show');
+// question related routes
+Route::get('/questions', 'App\Http\Controllers\QuestionController@index'); // display all
+Route::get('/questions/{id}', 'App\Http\Controllers\QuestionController@show'); // display id specific
+
+// answer related routes

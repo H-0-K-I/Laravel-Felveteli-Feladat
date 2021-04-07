@@ -26,6 +26,12 @@
                     </button>
                 </td>
 
+                <td>
+                    <h2>
+                        vagy
+                    </h2>
+                </td>
+
                 <td style="width:400px;">
                     <button class="navigation-button" onclick="window.location='{{ url("questions/add") }}'" style="width:300px;">
                         <h3>
