@@ -9,6 +9,7 @@ use App\Models\Answer;
 class QuestionController extends Controller
 {
 
+    // route function to index page with all questions listed
     public function index(){
 
         // DB query
@@ -26,14 +27,25 @@ class QuestionController extends Controller
             $question["no_of_answers"] = $noOfAnswers;
         }
 
-    return view('questions', ['questions' => $questions]);
+        // ordering questions by number of answers
+        $sorted_questions = $questions->sortByDesc('no_of_answers');
+
+    return view('index', ['questions' => $sorted_questions]);
     }
 
-
+    // route function to a specific question's page
     public function show($id){
         
         // DB query here
 
-        return view('question', ['id' => $id]);
+        return view('show', ['id' => $id]);
+    }
+
+    public function edit($id){
+
+    }
+
+    public function create(){
+
     }
 }
