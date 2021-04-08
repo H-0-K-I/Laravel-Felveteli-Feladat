@@ -41,11 +41,11 @@ class QuestionController extends Controller
         return view('show', ['id' => $id]);
     }
 
-    public function edit($id){
+    /*public function edit($id){
 
-    }
+    }*/
 
     public function create(){
-
+        return view('create_question');
     }
 }

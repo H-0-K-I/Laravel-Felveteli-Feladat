@@ -88,7 +88,19 @@
             }
 
             .navigation-button:hover {
-                border: 6px solid #888888;
+                border: 6px solid #FFFFFF;
+            }
+
+            .list-button {
+                background-color: #E3E3E3
+                width: 100%;
+                text-align:left;
+                color: #444444;
+                border: 3px solid #334255;
+            }
+
+            .list-button:hover {
+                border: 3px solid #E6E6E6;
             }
 
         </style>

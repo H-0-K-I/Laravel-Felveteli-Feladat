@@ -33,7 +33,7 @@
                 </td>
 
                 <td style="width:400px;">
-                    <button class="navigation-button" onclick="window.location='{{ url("questions/add") }}'" style="width:300px;">
+                    <button class="navigation-button" onclick="window.location='{{ url("questions/create") }}'" style="width:300px;">
                         <h3>
                             Új kérdés feltöltése
                             <img src="img/arrow_up.png" alt="Arrow up" style="width:20px;height:20px;">    

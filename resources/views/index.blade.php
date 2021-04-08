@@ -16,7 +16,21 @@
         <!-- List of all questions -->
         @foreach($questions as $question)
                 <div>
-                        {{ $question->question }} - answers: {{ $question->no_of_answers }}
+                        <table class="center" style="width:75%;" >
+                                <tr>
+                                        <td style="float:left;width:100%">
+                                                <button class="list-button" style="background-color:#E3E3E3;width:100%" onclick="window.location='{{ url("questions/$question->id") }}'">
+                                                        <h3 style="margin-left:20px">
+                                                                ● {{ $question->question }} <img src="../../img/black-curved-right-arrow.png" alt="Black curved rigt arrow" style="width:40px;height:40px;float:right;">
+                                                        </h3>
+
+                                                        <h4 style="margin-left:60px">
+                                                                {{ $question->no_of_answers }} válasz
+                                                        </h4>
+                                                </button>
+                                        </td>
+                                </tr>
+                        </table>
                 </div>
         @endforeach
 @endsection
