@@ -1,6 +1,7 @@
 @extends('layout.layout')
 
 @section('content')
+
     <!-- Introduction -->
     <div class="text">
         <h1>

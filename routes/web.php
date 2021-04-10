@@ -27,6 +27,7 @@ Route::get('/home', function () {
 // question related routes
 Route::get('/questions', 'App\Http\Controllers\QuestionController@index'); // display all
 Route::get('/questions/create', 'App\Http\Controllers\QuestionController@create'); // create new
+Route::post('/questions', 'App\Http\Controllers\QuestionController@store'); // store newly created in DB
 Route::get('/questions/{id}', 'App\Http\Controllers\QuestionController@show'); // display id specific
 
 // answer related routes

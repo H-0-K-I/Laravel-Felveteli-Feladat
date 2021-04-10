@@ -50,4 +50,22 @@ class QuestionController extends Controller
     public function create(){
         return view('create_question');
     }
+
+    public function store(){
+
+        // request data from form
+        $userdata = request('question');
+
+        // creating new model instance
+        $question = new Question();
+        $question->question = $userdata;
+
+        // saving data to DB
+        if($question->save()){
+            return redirect('/')->with('message', 'A változásokat sikeresen mentette a rendszer!');
+        } else {
+            return redirect('/')->with('message', 'HIBA! Kérjük próbálkozzon újra.');
+        }
+        
+    }
 }

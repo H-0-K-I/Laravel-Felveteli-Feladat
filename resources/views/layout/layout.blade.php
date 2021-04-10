@@ -105,18 +105,26 @@
 
             .back-button {
                 background-color:#E3E3E3;
-                border: 6px solid #334255
+                border: 3px solid #334255
             }
 
             .back-button:hover {
-                border: 6px solid #E3E3E3;
+                border: 3px solid #E3E3E3;
+            }
+
+            .save {
+                border: 3px solid #334255;
+            }
+
+            .save:hover {
+                border: 3px solid #008A3D;
             }
 
         </style>
     </head>
 
     <!-- PAGE CONTENT -->
-    <body class="antialiased">
+    <body class="antialiased" onload="showAlert()">
 
     <!-- Header -->
     <div class="header">
@@ -139,5 +147,16 @@
 
 
     @yield('content')
+
+    <footer onload="showAlert()">
+        <!-- Alert if a POST request was successful -->
+        @if(session()->has('message'))
+            <script>
+                function showAlert() {
+                    alert("{{ session()->get('message') }}");
+                }
+            </script>
+        @endif
+    </footer>
 
 </html>
