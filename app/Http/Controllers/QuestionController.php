@@ -37,8 +37,10 @@ class QuestionController extends Controller
     public function show($id){
         
         // DB query here
+        $question = Question::findOrFail($id);
+        $answers = Answer::where('question_id', $id)->get();
 
-        return view('show', ['id' => $id]);
+        return view('show', ['question' => $question, 'answers' => $answers]);
     }
 
     /*public function edit($id){

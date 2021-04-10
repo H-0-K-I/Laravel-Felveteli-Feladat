@@ -33,4 +33,17 @@
                         </table>
                 </div>
         @endforeach
+
+        <!-- Button to navigate back -->
+        <div>
+                <table class="center">
+                        <td>
+                                <button class="back-button" onclick="window.location='{{ url("home") }}'" style="width:300px;">
+                                        <h3>
+                                        Vissza   
+                                        </h3>
+                                </button>
+                        </td>
+                </table>
+        </div>
 @endsection
