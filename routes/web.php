@@ -34,3 +34,4 @@ Route::delete('/questions/{id}', 'App\Http\Controllers\QuestionController@destro
 // answer related routes
 Route::get('/answers/create/{id}', 'App\Http\Controllers\AnswerController@create'); // create new
 Route::post('/questions/{id}', 'App\Http\Controllers\AnswerController@store'); // store newly created in DB
+Route::delete('/questions/deleteanswer/{id}', 'App\Http\Controllers\AnswerController@destroy'); // delete

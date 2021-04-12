@@ -20,7 +20,7 @@
                                                 <form action="/questions/{{ $question->id }}" method="POST">
                                                         @csrf
                                                         @method('DELETE')
-                                                        <button class="delete-button" style="color:#FFFFFF">
+                                                        <button class="delete-button">
                                                                 Törlés
                                                         </button>
                                                 </form>
@@ -28,7 +28,7 @@
                                 </td>
                         </tr>
 
-                        <!-- List of answers to a specific question -->
+                        <!-- List of answers to a specific question with the ability to delete -->
                         @if(count($answers) == 0)
                                 <tr>
                                         <td style="padding:10px;float:left;width:100%;background-color:#C1C1C1;">
@@ -47,6 +47,14 @@
                                                 <h5 style="margin-left:60px">
                                                         Ez a válasz {{ $answer->upvotes }} felhasználó szerint hasznos
                                                 </h5>
+
+                                                <form action="/questions/deleteanswer/{{ $answer->id }}" method="POST">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button class="answer-delete-button">
+                                                                Törlés
+                                                        </button>
+                                                </form>
                                         </td>
                                 </tr>
                                 @endforeach

@@ -123,11 +123,25 @@
             .delete-button {
                 font-family: 'Nunito', sans-serif;
                 font-size: 16px;
+                color:#FFFFFF;
                 background-color:#CC0000;
                 border: 3px solid #E3E3E3;
             }
 
             .delete-button:hover {
+                border: 3px solid #CC0000;
+            }
+
+            .answer-delete-button {
+                font-family: 'Nunito', sans-serif;
+                font-size: 16px;
+                color:#FFFFFF;
+                background-color:#CC0000;
+                margin-left:60px;
+                border: 3px solid #C1C1C1;
+            }
+
+            .answer-delete-button:hover {
                 border: 3px solid #CC0000;
             }
 
