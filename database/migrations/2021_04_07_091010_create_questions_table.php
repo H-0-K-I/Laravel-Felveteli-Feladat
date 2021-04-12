@@ -18,6 +18,14 @@ class CreateQuestionsTable extends Migration
             $table->string('question', 2500)->unique();
             $table->timestamps();
         });
+
+        DB::table('questions')->insert(
+                array('question' => 'Pontosan mi a Laravel?')
+        );
+
+        DB::table('questions')->insert(
+            array('question' => 'Melyik a legfrissebb Laravel verzió?')
+        );
     }
 
     /**

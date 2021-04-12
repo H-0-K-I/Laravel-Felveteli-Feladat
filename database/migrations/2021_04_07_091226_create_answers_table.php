@@ -20,6 +20,20 @@ class CreateAnswersTable extends Migration
             $table->integer('upvotes')->nullable();
             $table->timestamps();
         });
+
+        DB::table('answers')->insert(
+            array('question_id' => 2,
+                'answer' => 'Laravel 6.2',
+                'upvotes' => 0
+            )
+        );
+
+        DB::table('answers')->insert(
+            array('question_id' => 2,
+                'answer' => 'Jelenleg a Laravel 8 a legújabb verzió.',
+                'upvotes' => 4
+            )
+        );
     }
 
     /**
