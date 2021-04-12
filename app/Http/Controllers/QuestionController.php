@@ -30,7 +30,8 @@ class QuestionController extends Controller
         // ordering questions by number of answers
         $sorted_questions = $questions->sortByDesc('no_of_answers');
 
-    return view('index', ['questions' => $sorted_questions]);
+        // returning view and results
+        return view('index', ['questions' => $sorted_questions]);
     }
 
     // route function to a specific question's page
@@ -40,6 +41,7 @@ class QuestionController extends Controller
         $question = Question::findOrFail($id);
         $answers = Answer::where('question_id', $id)->get();
 
+        // returning view and results
         return view('show', ['question' => $question, 'answers' => $answers]);
     }
 
@@ -47,13 +49,18 @@ class QuestionController extends Controller
 
     }*/
 
+    // route function to the create view
     public function create(){
+
+        // returning view and results
         return view('create_question');
     }
 
+
+    // route function when creating a new record
     public function store(){
 
-        // request data from form
+        // requesting data from form
         $userdata = request('question');
 
         // creating new model instance
@@ -62,10 +69,13 @@ class QuestionController extends Controller
 
         // saving data to DB
         if($question->save()){
+
+            // returning view and results
             return redirect('/')->with('message', 'A változásokat sikeresen mentette a rendszer!');
         } else {
+
+            // returning view and results
             return redirect('/')->with('message', 'HIBA! Kérjük próbálkozzon újra.');
         }
-        
     }
 }

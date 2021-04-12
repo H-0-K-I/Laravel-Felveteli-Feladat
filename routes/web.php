@@ -31,3 +31,5 @@ Route::post('/questions', 'App\Http\Controllers\QuestionController@store'); // s
 Route::get('/questions/{id}', 'App\Http\Controllers\QuestionController@show'); // display id specific
 
 // answer related routes
+Route::get('/answers/create/{id}', 'App\Http\Controllers\AnswerController@create'); // create new
+Route::post('/questions/{id}', 'App\Http\Controllers\AnswerController@store'); // store newly created in DB

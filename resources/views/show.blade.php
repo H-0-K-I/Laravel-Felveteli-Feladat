@@ -43,12 +43,21 @@
                                 @endforeach
                         @endif
 
-                        <!-- Button to navigate back -->
+                        <!-- Buttons -->
                         <tr>
                                 <td style="padding-top:50px;text-align:center;" >
+
+                                        <!-- Button to navigate back -->
+                                        <button class="back-button" style="width:300px;" onclick="window.location='{{ url("answers/create/$question->id") }}'">
+                                                <h3>
+                                                        Új válasz hozzáadása
+                                                </h3>
+                                        </button>
+
+                                         <!-- Button to add answer -->
                                         <button class="back-button" onclick="window.location='{{ url("questions") }}'" style="width:300px;">
                                                 <h3>
-                                                Vissza   
+                                                        Vissza
                                                 </h3>
                                         </button>
                                 </td>
