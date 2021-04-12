@@ -1,18 +1,58 @@
 @extends('layout.layout')
 
 @section('content')
-        <!-- List of answers to a specific question -->
-        <div>
-            Kérdés: {{ $question->question }}
-            Válaszok: @foreach($answers as $answer) {{ $answer->answer }}, és ez {{ $answer->upvotes }} felhasználó szerint hasznos @endforeach
+        <!-- Introduction -->
+        <div class="text">
+                <h1>
+                <img src="../../img/logo.jpg" alt="Logo">
+                GYIK - Laravel
+                </h1>
         </div>
 
-        <!-- Button to navigate back -->
+        <!-- List of answers to a specific question -->
         <div>
-                <button class="back-button" onclick="window.location='{{ url("questions") }}'" style="width:300px;">
-                                <h3>
-                                Vissza   
-                                </h3>
-                </button>
+                <table class="center" style="width:75%;">
+                        <tr>
+                                <td style="padding:10px;float:left;width:100%;background-color:#E3E3E3;">
+                                        <h2 style="margin-left:20px;color:#000000;">
+                                                {{ $question->question }}
+                                        </h2>
+                                </td>
+                        </tr>
+
+                        @if(count($answers) == 0)
+                                <tr>
+                                        <td style="padding:10px;float:left;width:100%;background-color:#C1C1C1;">
+                                                <h3 style="margin-left:40px">
+                                                        Erre a kérdésre még nem érkezett válasz.
+                                                </h3>
+                                        </td>
+                                </tr>
+                        @else
+                                @foreach($answers as $answer)
+                                <tr>
+                                        <td style="padding:10px;float:left;width:100%;background-color:#C1C1C1;">
+                                                <h3 style="margin-left:40px">
+                                                        ● {{ $answer->answer }}
+                                                </h3>
+                                                <h5 style="margin-left:60px">
+                                                        Ez a válasz {{ $answer->upvotes }} felhasználó szerint hasznos
+                                                </h5>
+                                        </td>
+                                </tr>
+                                @endforeach
+                        @endif
+
+                        <!-- Button to navigate back -->
+                        <tr>
+                                <td style="padding-top:50px;text-align:center;" >
+                                        <button class="back-button" onclick="window.location='{{ url("questions") }}'" style="width:300px;">
+                                                <h3>
+                                                Vissza   
+                                                </h3>
+                                        </button>
+                                </td>
+                        </tr>
+                </table>
         </div>
 @endsection

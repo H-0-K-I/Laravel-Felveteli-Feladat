@@ -138,9 +138,11 @@
                     Laravel FAQ - HU
                 </li>
 
+                <!--
                 <li style="float:right;padding-right:50px;">
                     keresés
                 </li>
+                -->
             </ul>
         </div>
     </div>

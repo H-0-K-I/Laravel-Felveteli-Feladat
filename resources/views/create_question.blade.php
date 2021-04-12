@@ -14,7 +14,7 @@
         <form action="/questions" method="POST">
             @csrf
             <h2>Mire keres választ?</h2>
-            <input type="text" id="question" name="question" placeholder="Ide írja a kérdést" style="width:75%;font-size:32px;height:100px!important;" >
+            <input type="text" id="question" name="question" placeholder="Ide írja a kérdést" style="width:75%;font-size:32px;height:100px!important;" required>
             <br>
             <input class="save" type="image" name="submit" src="../../img/green_check.jpg" alt="submit" style="margin-top:47px;">
         </form>
