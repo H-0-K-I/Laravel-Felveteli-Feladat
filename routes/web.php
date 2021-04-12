@@ -29,6 +29,7 @@ Route::get('/questions', 'App\Http\Controllers\QuestionController@index'); // di
 Route::get('/questions/create', 'App\Http\Controllers\QuestionController@create'); // create new
 Route::post('/questions', 'App\Http\Controllers\QuestionController@store'); // store newly created in DB
 Route::get('/questions/{id}', 'App\Http\Controllers\QuestionController@show'); // display id specific
+Route::delete('/questions/{id}', 'App\Http\Controllers\QuestionController@destroy'); // delete
 
 // answer related routes
 Route::get('/answers/create/{id}', 'App\Http\Controllers\AnswerController@create'); // create new

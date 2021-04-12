@@ -9,17 +9,26 @@
                 </h1>
         </div>
 
-        <!-- List of answers to a specific question -->
+        <!-- Question with the ability to delete it -->
         <div>
                 <table class="center" style="width:75%;">
                         <tr>
                                 <td style="padding:10px;float:left;width:100%;background-color:#E3E3E3;">
                                         <h2 style="margin-left:20px;color:#000000;">
                                                 {{ $question->question }}
+
+                                                <form action="/questions/{{ $question->id }}" method="POST">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button class="delete-button" style="color:#FFFFFF">
+                                                                Törlés
+                                                        </button>
+                                                </form>
                                         </h2>
                                 </td>
                         </tr>
 
+                        <!-- List of answers to a specific question -->
                         @if(count($answers) == 0)
                                 <tr>
                                         <td style="padding:10px;float:left;width:100%;background-color:#C1C1C1;">

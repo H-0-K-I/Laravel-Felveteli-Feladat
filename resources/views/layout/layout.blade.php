@@ -120,6 +120,17 @@
                 border: 3px solid #008A3D;
             }
 
+            .delete-button {
+                font-family: 'Nunito', sans-serif;
+                font-size: 16px;
+                background-color:#CC0000;
+                border: 3px solid #E3E3E3;
+            }
+
+            .delete-button:hover {
+                border: 3px solid #CC0000;
+            }
+
         </style>
     </head>
 

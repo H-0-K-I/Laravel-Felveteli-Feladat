@@ -78,4 +78,22 @@ class QuestionController extends Controller
             return redirect('/')->with('message', 'HIBA! Kérjük próbálkozzon újra.');
         }
     }
+
+    // function to delete a record
+    public function destroy($id){
+
+        // DB query here
+        $question = Question::findOrFail($id);
+
+        // deleting, returning redirect with message
+        if($question->delete()){
+
+            // returning view and results
+            return redirect('/questions')->with('message', 'A változásokat sikeresen mentette a rendszer!');
+        } else {
+
+            // returning view and results
+            return redirect('/questions')->with('message', 'HIBA! Kérjük próbálkozzon újra.');
+        }
+    }
 }
