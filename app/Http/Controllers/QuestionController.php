@@ -39,7 +39,7 @@ class QuestionController extends Controller
         
         // DB query here
         $question = Question::findOrFail($id);
-        $answers = Answer::where('question_id', $id)->get();
+        $answers = Answer::where('question_id', $id)->orderBy('upvotes', 'DESC')->get();
 
         // returning view and results
         return view('show', ['question' => $question, 'answers' => $answers]);
