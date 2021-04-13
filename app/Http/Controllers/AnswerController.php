@@ -42,8 +42,42 @@ class AnswerController extends Controller
         }
     }
 
-     // function to delete a record
-     public function destroy($id){
+    // route to editing page
+    public function edit($id){
+
+        // DB query here
+        $answer = Answer::findOrFail($id);
+
+        // returning view and results
+        return view('edit_answer', ['answer' => $answer]);
+    }
+
+    // route function to save edit
+    public function save_edit($id){
+
+        // DB query here
+        $answer = Answer::findOrFail($id);
+
+        // requesting data from form
+        $userdata = request('answer');
+
+        // changing data
+        $answer->answer = $userdata;
+
+        // saving data to DB
+        if($answer->save()){
+
+            // returning view and results
+            return redirect("/questions/$answer->question_id")->with('message', 'A változásokat sikeresen mentette a rendszer!');
+        } else {
+
+            // returning view and results
+            return redirect("/questions/$answer->question_id")->with('message', 'HIBA! Kérjük próbálkozzon újra.');
+        }
+    }
+
+    // function to delete a record
+    public function destroy($id){
 
         // DB query here
         $answer = Answer::findOrFail($id);

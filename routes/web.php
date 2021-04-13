@@ -38,4 +38,5 @@ Route::get('/answers/create/{id}', 'App\Http\Controllers\AnswerController@create
 Route::post('/questions/{id}', 'App\Http\Controllers\AnswerController@store'); // store newly created in DB
 Route::post('/answers/upvote/{id}', 'App\Http\Controllers\AnswerController@upvote'); // upvote existing answer
 Route::get('/answers/edit/{id}', 'App\Http\Controllers\AnswerController@edit'); // edit existing answer
+Route::post('/answers/edit/{id}', 'App\Http\Controllers\AnswerController@save_edit'); // save edit to DB
 Route::delete('/questions/deleteanswer/{id}', 'App\Http\Controllers\AnswerController@destroy'); // delete

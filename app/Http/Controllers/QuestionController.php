@@ -45,7 +45,7 @@ class QuestionController extends Controller
         return view('show', ['question' => $question, 'answers' => $answers]);
     }
 
-    // route to editing page
+    // route function to editing page
     public function edit($id){
 
         // DB query here
@@ -55,6 +55,7 @@ class QuestionController extends Controller
         return view('edit_question', ['question' => $question]);
     }
 
+    // route function to save edit
     public function save_edit($id){
         
         // DB query here

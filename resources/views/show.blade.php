@@ -20,12 +20,12 @@
                                                 <table>
                                                         <tr>
                                                                 <td>
-                                                                        <button class="modify-button" onclick="window.location='{{ url("questions/edit/$question->id") }}'">
+                                                                        <button class="q-modify-button" onclick="window.location='{{ url("questions/edit/$question->id") }}'">
                                                                                 Módosítás
                                                                         </button>
                                                                 </td>
 
-                                                                <td style="padding-left:50px;">
+                                                                <td style="padding-left:20px;">
                                                                         <form action="/questions/{{ $question->id }}" method="POST">
                                                                                 @csrf
                                                                                 @method('DELETE')
@@ -40,7 +40,7 @@
                                 </td>
                         </tr>
 
-                        <!-- List of answers to a specific question with the ability to delete -->
+                        <!-- List of answers to a specific question with the ability to upvote edit or delete -->
                         @if(count($answers) == 0)
                                 <tr>
                                         <td style="padding:10px;float:left;width:100%;background-color:#C1C1C1;">
@@ -70,6 +70,12 @@
                                                                                 </button>
                                                                         </form>
 
+                                                                </td>
+
+                                                                <td>
+                                                                        <button class="a-modify-button" onclick="window.location='{{ url("answers/edit/$answer->id") }}'">
+                                                                                Módosítás
+                                                                        </button>
                                                                 </td>
 
                                                                 <td>

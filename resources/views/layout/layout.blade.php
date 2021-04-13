@@ -137,7 +137,7 @@
                 font-size: 16px;
                 color:#FFFFFF;
                 background-color:#CC0000;
-                margin-left:60px;
+                margin-left:20px;
                 border: 3px solid #C1C1C1;
             }
 
@@ -158,16 +158,29 @@
                 border: 3px solid #0000CC;
             }
 
-            .modify-button {
+            .q-modify-button {
                 font-family: 'Nunito', sans-serif;
                 font-size: 16px;
                 color:#FFFFFF;
                 background-color:#555555;
-                margin-left:20px;
                 border: 3px solid #E3E3E3;
+                margin-left:20px;
             }
 
-            .modify-button:hover {
+            .q-modify-button:hover {
+                border: 3px solid #555555;
+            }
+
+            .a-modify-button {
+                font-family: 'Nunito', sans-serif;
+                font-size: 16px;
+                color:#FFFFFF;
+                background-color:#555555;
+                border: 3px solid #C1C1C1;
+                margin-left:20px;
+            }
+
+            .a-modify-button:hover {
                 border: 3px solid #555555;
             }
 
