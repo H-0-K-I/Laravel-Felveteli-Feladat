@@ -12,6 +12,7 @@ A beüzemelés egyszű.
 
 Ha XAMPP-ot használunk, indítsuk el az Apache és a MySQL szervereket!
 
+Lépjünk be a projekt mappába, és módosítsuk a .env.example fájl nevét .env-re!
 Az adatbázis kapcsolódáshoz a következő paramétereket használja a projekt: <br>
 DB_CONNECTION=mysql<br>
 DB_HOST=localhost<br>
@@ -19,7 +20,8 @@ DB_PORT=3306<br>
 DB_DATABASE=faq<br>
 DB_USERNAME=root<br>
 DB_PASSWORD=<br>
-Ha ezek nem megfelelőek, a .env fájlban módosíthatók.
+
+Ezeket írjuk be az újonnan átnevezett .env fájl megfelelő soraiba!
 
 Hozzuk létre a szükséges adatbázist:
 Ehhez nyissunk meg egy parancssort, és írjuk be a következőket: 
@@ -30,15 +32,16 @@ Ezek után bezárhatjuk a parancssort.
 
 Az utolsó lépésekhez csupán Composer-re (ha még nincs a gépünkön), és pár utasításra van szükség parancssorban:
 - a Composer letöltését és telepítését az alábbi helyről tehetjük meg: <a href="https://www.tutorialspoint.com/laravel/laravel_installation.htm"></a> 
-- navigáljunk a projekt 'faq' mappájába (pl.: cd C:\Users\userxyz\Desktop\Project\faq)
+- navigáljunk a projekt mappájába (pl.: cd C:\Users\userxyz\Desktop\Project\)
 - adjuk ki a következő parancsokat:
     - composer update
+    - php artisan key:generate
     - php artisan migrate
     - php artisan serve
 
 Ha sikeresen lefutottak a parancsok, akkor a serve parancs kimenete valami hasonló: Starting Laravel development server: http://127.0.0.1:8000
 
-A linkre navigálva böngészőben láthatjuk is a beüzemelt projektet.
+A linkre navigálva böngészőben láthatjuk a beüzemelt projektet.
 
 
 ## Funkciók
