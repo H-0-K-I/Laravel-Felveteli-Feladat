@@ -1,4 +1,48 @@
+## Leírás
+Kreatív szabadságom arra használtam, hogy egy gyakorikerdesek.hu-hoz hasonló kérdés-válasz oldalt hozzak létre a számomra újonnan megismert Laravel Framework témájában. Az oldal magyar nyelvű, letisztult, felhasználóbarát. A kód nyelvezete és dokumentálása angol. A fejlesztés során végig Github-ot használtam, így a teljes fejlesztési folyamat nyomon követhető.
 
+Fontos: XAMPP-ot használtam a fejlesztés során, MySQL nyelvű az adatbázis
+XAMPP dokumentáció és letöltés: <a href="https://www.apachefriends.org/hu/index.html"></a>
+
+Az exportált adatbázis megtalálható itt a repositoryban is. 
+
+
+## Beüzemelés
+A beüzemelés egyszű.
+
+Ha XAMPP-ot használunk, indítsuk el az Apache és a MySQL szervereket!
+
+Az adatbázis kapcsolódáshoz a következő paramétereket használja a projekt:
+DB_CONNECTION=mysql
+DB_HOST=localhost
+DB_PORT=3306
+DB_DATABASE=faq
+DB_USERNAME=root
+DB_PASSWORD=
+Ha ezek nem megfelelőek, a faq/.env fájlban módosíthatók.
+
+Hozzuk létre a szükséges adatbázist:
+Ehhez nyissunk meg egy parancssort, és írjuk be a következőket: 
+- mysql -u root 
+    (ha ez a parancs nem működik, adjuk hozzá a MySQL-t a 'Path' környezeti változóhoz; XAMPP esetében ez az út \xampp\mysql\bin; hozzáadás után újra kell indítani a gépet)
+- create database faq;
+Ezek után bezárhatjuk a parancssort.
+
+Az utolsó lépésekhez csupán Composer-re (ha még nincs a gépünkön), és pár utasításra van szükség parancssorban:
+- a Composer letöltését és telepítését az alábbi helyről tehetjük meg: <a href="https://www.tutorialspoint.com/laravel/laravel_installation.htm"></a> 
+- navigáljunk a projekt 'faq' mappájába (pl.: cd C:\Users\userxyz\Desktop\Project\faq)
+- adjuk ki a következő parancsokat:
+    - php artisan migrate
+    - php artisan serve
+
+Ha sikeresen lefutottak a parancsok, akkor a serve parancs kimenete valami hasonló: Starting Laravel development server: http://127.0.0.1:8000
+
+A linkre navigálva böngészőben láthatjuk is a beüzemelt projektet.
+
+
+## Funkciók
+Kérdések és válaszok rendezése, listázása, feltöltése,  módosítása, törlése.
+Válaszok hasznosságának értékelése.
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
