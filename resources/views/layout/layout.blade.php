@@ -145,6 +145,19 @@
                 border: 3px solid #CC0000;
             }
 
+            .upvote-button {
+                font-family: 'Nunito', sans-serif;
+                font-size: 16px;
+                color:#FFFFFF;
+                background-color:#0000CC;
+                margin-left:60px;
+                border: 3px solid #C1C1C1;
+            }
+
+            .upvote-button:hover {
+                border: 3px solid #0000CC;
+            }
+
         </style>
     </head>
 

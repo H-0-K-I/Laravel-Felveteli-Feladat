@@ -48,13 +48,29 @@
                                                         Ez a válasz {{ $answer->upvotes }} felhasználó szerint hasznos
                                                 </h5>
 
-                                                <form action="/questions/deleteanswer/{{ $answer->id }}" method="POST">
-                                                        @csrf
-                                                        @method('DELETE')
-                                                        <button class="answer-delete-button">
-                                                                Törlés
-                                                        </button>
-                                                </form>
+                                                <table>
+                                                        <tr>
+                                                                <td>
+                                                                        <form action="/answers/upvote/{{ $answer->id }}" method="POST">
+                                                                                @csrf
+                                                                                <button class="upvote-button">
+                                                                                        + Hasznos válasz
+                                                                                </button>
+                                                                        </form>
+
+                                                                </td>
+
+                                                                <td>
+                                                                        <form action="/questions/deleteanswer/{{ $answer->id }}" method="POST">
+                                                                                @csrf
+                                                                                @method('DELETE')
+                                                                                <button class="answer-delete-button">
+                                                                                        Törlés
+                                                                                </button>
+                                                                        </form>
+                                                                </td>
+                                                        </tr>
+                                                </table>
                                         </td>
                                 </tr>
                                 @endforeach

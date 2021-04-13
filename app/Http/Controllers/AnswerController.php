@@ -59,4 +59,24 @@ class AnswerController extends Controller
             return redirect('/questions')->with('message', 'HIBA! Kérjük próbálkozzon újra.');
         }
     }
+
+    public function upvote($id) {
+
+        // DB query here
+        $answer = Answer::findOrFail($id);
+
+        // adding upvote
+        $answer->upvotes = $answer->upvotes + 1;
+
+        // save data to DB
+        if($answer->save()){
+
+            // returning view and results
+            return redirect()->back()->with('message', 'Köszönjük a visszajelzést!');
+        } else {
+
+            // returning view and results
+            return redirect()->back()->with('message', 'HIBA! Kérjük próbálkozzon újra.');
+        }
+    }
 }
