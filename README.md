@@ -1,8 +1,8 @@
 ## Leírás
 Kreatív szabadságom arra használtam, hogy egy gyakorikerdesek.hu-hoz hasonló kérdés-válasz oldalt hozzak létre a számomra újonnan megismert Laravel Framework témájában. Az oldal magyar nyelvű, letisztult, felhasználóbarát. A kód nyelvezete és dokumentálása angol. A fejlesztés során végig Github-ot használtam, így a teljes fejlesztési folyamat nyomon követhető.
 
-Fontos: XAMPP-ot használtam a fejlesztés során, MySQL nyelvű az adatbázis
-XAMPP dokumentáció és letöltés: <a href="https://www.apachefriends.org/hu/index.html"></a>
+Fontos: XAMPP-ot használtam a fejlesztés során, MySQL nyelvű az adatbázis<br>
+XAMPP dokumentáció és letöltés: https://www.apachefriends.org/hu/index.html
 
 Az exportált adatbázis megtalálható itt a repositoryban is. 
 
@@ -10,9 +10,9 @@ Az exportált adatbázis megtalálható itt a repositoryban is.
 ## Beüzemelés
 A beüzemelés egyszű.
 
-Ha XAMPP-ot használunk, indítsuk el az Apache és a MySQL szervereket!
+Ha XAMPP-ot használunk, indítsuk el az Apache és a MySQL szervereket!<br>
 
-Lépjünk be a projekt mappába, és módosítsuk a .env.example fájl nevét .env-re!
+Lépjünk be a projekt mappába, és módosítsuk a .env.example fájl nevét .env-re!<br>
 Az adatbázis kapcsolódáshoz a következő paramétereket használja a projekt: <br>
 DB_CONNECTION=mysql<br>
 DB_HOST=localhost<br>
@@ -30,8 +30,8 @@ Ehhez nyissunk meg egy parancssort, és írjuk be a következőket:
 - create database faq;
 Ezek után bezárhatjuk a parancssort.
 
-Az utolsó lépésekhez csupán Composer-re (ha még nincs a gépünkön), és pár utasításra van szükség parancssorban:
-- a Composer letöltését és telepítését az alábbi helyről tehetjük meg: <a href="https://www.tutorialspoint.com/laravel/laravel_installation.htm"></a> 
+Az utolsó lépésekhez csupán Composer-re (ha még nincs a gépünkön), és pár utasításra van szükség parancssorban:<br>
+- a Composer letöltését és telepítését az alábbi helyről tehetjük meg: https://www.tutorialspoint.com/laravel/laravel_installation.htm 
 - navigáljunk a projekt mappájába (pl.: cd C:\Users\userxyz\Desktop\Project\)
 - adjuk ki a következő parancsokat:
     - composer update
@@ -39,7 +39,8 @@ Az utolsó lépésekhez csupán Composer-re (ha még nincs a gépünkön), és p
     - php artisan migrate
     - php artisan serve
 
-Ha sikeresen lefutottak a parancsok, akkor a serve parancs kimenete valami hasonló: Starting Laravel development server: http://127.0.0.1:8000
+Ha sikeresen lefutottak a parancsok, akkor a serve parancs kimenete valami hasonló:<br>
+Starting Laravel development server: http://127.0.0.1:8000
 
 A linkre navigálva böngészőben láthatjuk a beüzemelt projektet.
 
