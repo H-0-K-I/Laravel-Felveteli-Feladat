@@ -19,7 +19,7 @@ DB_PORT=3306<br>
 DB_DATABASE=faq<br>
 DB_USERNAME=root<br>
 DB_PASSWORD=<br>
-Ha ezek nem megfelelőek, a faq/.env fájlban módosíthatók.
+Ha ezek nem megfelelőek, a .env fájlban módosíthatók.
 
 Hozzuk létre a szükséges adatbázist:
 Ehhez nyissunk meg egy parancssort, és írjuk be a következőket: 
@@ -32,6 +32,7 @@ Az utolsó lépésekhez csupán Composer-re (ha még nincs a gépünkön), és p
 - a Composer letöltését és telepítését az alábbi helyről tehetjük meg: <a href="https://www.tutorialspoint.com/laravel/laravel_installation.htm"></a> 
 - navigáljunk a projekt 'faq' mappájába (pl.: cd C:\Users\userxyz\Desktop\Project\faq)
 - adjuk ki a következő parancsokat:
+    - composer update
     - php artisan migrate
     - php artisan serve
 
