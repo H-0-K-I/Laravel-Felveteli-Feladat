@@ -12,13 +12,13 @@ A beüzemelés egyszű.
 
 Ha XAMPP-ot használunk, indítsuk el az Apache és a MySQL szervereket!
 
-Az adatbázis kapcsolódáshoz a következő paramétereket használja a projekt:
-DB_CONNECTION=mysql
-DB_HOST=localhost
-DB_PORT=3306
-DB_DATABASE=faq
-DB_USERNAME=root
-DB_PASSWORD=
+Az adatbázis kapcsolódáshoz a következő paramétereket használja a projekt: <br>
+DB_CONNECTION=mysql<br>
+DB_HOST=localhost<br>
+DB_PORT=3306<br>
+DB_DATABASE=faq<br>
+DB_USERNAME=root<br>
+DB_PASSWORD=<br>
 Ha ezek nem megfelelőek, a faq/.env fájlban módosíthatók.
 
 Hozzuk létre a szükséges adatbázist:
