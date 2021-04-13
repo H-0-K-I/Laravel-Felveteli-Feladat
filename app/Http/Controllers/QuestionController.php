@@ -45,9 +45,38 @@ class QuestionController extends Controller
         return view('show', ['question' => $question, 'answers' => $answers]);
     }
 
-    /*public function edit($id){
+    // route to editing page
+    public function edit($id){
 
-    }*/
+        // DB query here
+        $question = Question::findOrFail($id);
+
+        // returning view and results
+        return view('edit_question', ['question' => $question]);
+    }
+
+    public function save_edit($id){
+        
+        // DB query here
+        $question = Question::findOrFail($id);
+
+        // requesting data from form
+        $userdata = request('question');
+
+        // changing data
+        $question->question = $userdata;
+
+        // saving data to DB
+        if($question->save()){
+
+            // returning view and results
+            return redirect("/questions/$id")->with('message', 'A változásokat sikeresen mentette a rendszer!');
+        } else {
+
+            // returning view and results
+            return redirect("/questions/$id")->with('message', 'HIBA! Kérjük próbálkozzon újra.');
+        }
+    }
 
     // route function to the create view
     public function create(){

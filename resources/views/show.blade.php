@@ -9,21 +9,33 @@
                 </h1>
         </div>
 
-        <!-- Question with the ability to delete it -->
+        <!-- Question with the ability to edit or delete it -->
         <div>
                 <table class="center" style="width:75%;">
                         <tr>
                                 <td style="padding:10px;float:left;width:100%;background-color:#E3E3E3;">
                                         <h2 style="margin-left:20px;color:#000000;">
-                                                {{ $question->question }}
+                                                {{ $question->question }} <br>
 
-                                                <form action="/questions/{{ $question->id }}" method="POST">
-                                                        @csrf
-                                                        @method('DELETE')
-                                                        <button class="delete-button">
-                                                                Törlés
-                                                        </button>
-                                                </form>
+                                                <table>
+                                                        <tr>
+                                                                <td>
+                                                                        <button class="modify-button" onclick="window.location='{{ url("questions/edit/$question->id") }}'">
+                                                                                Módosítás
+                                                                        </button>
+                                                                </td>
+
+                                                                <td style="padding-left:50px;">
+                                                                        <form action="/questions/{{ $question->id }}" method="POST">
+                                                                                @csrf
+                                                                                @method('DELETE')
+                                                                                <button class="delete-button">
+                                                                                        Törlés
+                                                                                </button>
+                                                                        </form>
+                                                                </td>
+                                                        </tr>
+                                                </table>
                                         </h2>
                                 </td>
                         </tr>

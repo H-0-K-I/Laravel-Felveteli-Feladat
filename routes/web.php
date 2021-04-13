@@ -28,6 +28,8 @@ Route::get('/home', function () {
 Route::get('/questions', 'App\Http\Controllers\QuestionController@index'); // display all
 Route::get('/questions/create', 'App\Http\Controllers\QuestionController@create'); // create new
 Route::post('/questions', 'App\Http\Controllers\QuestionController@store'); // store newly created in DB
+Route::get('/questions/edit/{id}', 'App\Http\Controllers\QuestionController@edit'); // edit existing question
+Route::post('/questions/edit/{id}', 'App\Http\Controllers\QuestionController@save_edit'); // save edit to DB
 Route::get('/questions/{id}', 'App\Http\Controllers\QuestionController@show'); // display id specific
 Route::delete('/questions/{id}', 'App\Http\Controllers\QuestionController@destroy'); // delete
 
@@ -35,4 +37,5 @@ Route::delete('/questions/{id}', 'App\Http\Controllers\QuestionController@destro
 Route::get('/answers/create/{id}', 'App\Http\Controllers\AnswerController@create'); // create new
 Route::post('/questions/{id}', 'App\Http\Controllers\AnswerController@store'); // store newly created in DB
 Route::post('/answers/upvote/{id}', 'App\Http\Controllers\AnswerController@upvote'); // upvote existing answer
+Route::get('/answers/edit/{id}', 'App\Http\Controllers\AnswerController@edit'); // edit existing answer
 Route::delete('/questions/deleteanswer/{id}', 'App\Http\Controllers\AnswerController@destroy'); // delete

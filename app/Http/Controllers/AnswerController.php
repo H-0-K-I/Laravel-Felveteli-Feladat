@@ -48,15 +48,18 @@ class AnswerController extends Controller
         // DB query here
         $answer = Answer::findOrFail($id);
 
+        // getting id of question
+        $qid = $answer->question_id;
+
         // deleting, returning redirect with message
         if($answer->delete()){
 
             // returning view and results
-            return redirect('/questions')->with('message', 'A változásokat sikeresen mentette a rendszer!');
+            return redirect("/questions/$qid")->with('message', 'A változásokat sikeresen mentette a rendszer!');
         } else {
 
             // returning view and results
-            return redirect('/questions')->with('message', 'HIBA! Kérjük próbálkozzon újra.');
+            return redirect("/questions/$qid")->with('message', 'HIBA! Kérjük próbálkozzon újra.');
         }
     }
 

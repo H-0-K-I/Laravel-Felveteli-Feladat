@@ -158,6 +158,19 @@
                 border: 3px solid #0000CC;
             }
 
+            .modify-button {
+                font-family: 'Nunito', sans-serif;
+                font-size: 16px;
+                color:#FFFFFF;
+                background-color:#555555;
+                margin-left:20px;
+                border: 3px solid #E3E3E3;
+            }
+
+            .modify-button:hover {
+                border: 3px solid #555555;
+            }
+
         </style>
     </head>
 
