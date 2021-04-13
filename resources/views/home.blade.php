@@ -44,5 +44,4 @@
             </tr>
         </table>
     </div>
-</body>
 @endsection

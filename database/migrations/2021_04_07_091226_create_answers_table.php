@@ -13,6 +13,7 @@ class CreateAnswersTable extends Migration
      */
     public function up()
     {
+        // Creating table
         Schema::create('answers', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->foreignId('question_id')->constrained('questions')->onUpdate('cascade')->onDelete('cascade');
@@ -21,6 +22,7 @@ class CreateAnswersTable extends Migration
             $table->timestamps();
         });
 
+        // Inserting data
         DB::table('answers')->insert(
             array('question_id' => 2,
                 'answer' => 'Laravel 6.2',
@@ -28,6 +30,7 @@ class CreateAnswersTable extends Migration
             )
         );
 
+        // Inserting data
         DB::table('answers')->insert(
             array('question_id' => 2,
                 'answer' => 'Jelenleg a Laravel 8 a legújabb verzió.',

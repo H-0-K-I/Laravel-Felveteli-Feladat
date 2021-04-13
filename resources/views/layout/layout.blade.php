@@ -9,7 +9,7 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
-        <!-- Styles -->
+        <!-- CSS Styles -->
         <style>
             body {
                 font-family: 'Nunito', sans-serif;
@@ -187,7 +187,7 @@
         </style>
     </head>
 
-    <!-- PAGE CONTENT -->
+    <!-- PAGE CONTENT START-->
     <body class="antialiased" onload="showAlert()">
 
     <!-- Header -->
@@ -202,7 +202,7 @@
                     Laravel FAQ - HU
                 </li>
 
-                <!--
+                <!-- Search function TODO
                 <li style="float:right;padding-right:50px;">
                     keresés
                 </li>
@@ -214,7 +214,9 @@
 
     @yield('content')
 
+    <!-- Footer -->
     <footer onload="showAlert()">
+
         <!-- Alert if a POST request was successful -->
         @if(session()->has('message'))
             <script>
@@ -225,4 +227,6 @@
         @endif
     </footer>
 
+<!-- PAGE CONTENT END-->
+</body>
 </html>

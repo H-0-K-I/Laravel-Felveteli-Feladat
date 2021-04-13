@@ -4,12 +4,12 @@
         <!-- Introduction -->
         <div class="text">
                 <h1>
-                <img src="img/logo.jpg" alt="Logo">
-                GYIK - Laravel
+                        <img src="img/logo.jpg" alt="Logo">
+                        GYIK - Laravel
                 </h1>
 
                 <h2>
-                Beküldött kérdések:
+                        Beküldött kérdések:
                 </h2>
         </div>
 
@@ -40,7 +40,7 @@
                         <td>
                                 <button class="back-button" onclick="window.location='{{ url("home") }}'" style="width:300px;">
                                         <h3>
-                                        Vissza   
+                                                Vissza   
                                         </h3>
                                 </button>
                         </td>

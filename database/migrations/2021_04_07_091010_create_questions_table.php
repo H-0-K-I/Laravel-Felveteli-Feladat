@@ -13,16 +13,19 @@ class CreateQuestionsTable extends Migration
      */
     public function up()
     {
+        // Creating table
         Schema::create('questions', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('question', 2500)->unique();
             $table->timestamps();
         });
 
+        // Inserting data
         DB::table('questions')->insert(
                 array('question' => 'Pontosan mi a Laravel?')
         );
 
+        // Inserting data
         DB::table('questions')->insert(
             array('question' => 'Melyik a legfrissebb Laravel verzió?')
         );

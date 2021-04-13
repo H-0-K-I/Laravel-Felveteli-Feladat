@@ -4,8 +4,8 @@
         <!-- Introduction -->
         <div class="text">
                 <h1>
-                <img src="../../img/logo.jpg" alt="Logo">
-                GYIK - Laravel
+                        <img src="../../img/logo.jpg" alt="Logo">
+                        GYIK - Laravel
                 </h1>
         </div>
 
